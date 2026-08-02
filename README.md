@@ -1,4 +1,4 @@
-# bunyan — Releases
+# Bunyan — Releases
 
 Public downloads for the **Hesabna** building-expenses app.
 The application source code is maintained privately; this repository hosts
