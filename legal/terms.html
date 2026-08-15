@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8"/>
+    <title>Bunyan — الشروط والأحكام</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        :root {
+          color-scheme: light dark;
+          --ink: light-dark(#1c1b16, #edeae2);
+          --muted: light-dark(#6e6b60, #a5a296);
+          --line: light-dark(#e6e1d6, #302e25);
+          --surface: light-dark(#ffffff, #201f19);
+          --surface-sunken: light-dark(#faf8f4, #17160f);
+          --accent: light-dark(#106b58, #3fae8f);
+          --beta-bg: light-dark(#eaf3ef, #16241f);
+          --beta-ink: light-dark(#106b58, #6fd4b7);
+          --radius: 8px;
+          font-size: 15px;
+        }
+        * { box-sizing: border-box; }
+        body {
+          font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+          color: var(--ink);
+          background: var(--surface-sunken);
+          max-width: 760px;
+          margin: 0 auto;
+          padding: clamp(1rem, 3vw, 2.5rem);
+          line-height: 1.7;
+        }
+        h1 { font-size: 1.3rem; font-weight: 700; margin: 0 0 0.25rem; }
+        h2 { font-size: 1.02rem; font-weight: 650; margin: 1.75rem 0 0.6rem; }
+        h2 .num { color: var(--muted); font-weight: 550; margin-inline-end: 0.35rem; }
+        h3 { font-size: 0.88rem; font-weight: 650; margin: 1rem 0 0.4rem; }
+        p, li { font-size: 0.92rem; color: var(--ink); }
+        ul { padding-inline-start: 1.3rem; margin: 0.4rem 0; }
+        li + li { margin-top: 0.25rem; }
+        .lede { color: var(--muted); font-size: 0.85rem; margin: 0 0 1.5rem; }
+        .card {
+          background: var(--surface);
+          border: 1px solid var(--line);
+          border-radius: var(--radius);
+          padding: 1.1rem 1.3rem;
+          margin-bottom: 1rem;
+        }
+        .beta-note {
+          background: var(--beta-bg); color: var(--beta-ink);
+          border-radius: var(--radius);
+          padding: 0.7rem 1rem;
+          font-size: 0.85rem; font-weight: 550;
+          margin-bottom: 1.5rem;
+        }
+        .lang-switch { display: flex; gap: 0.6rem; margin-bottom: 1.5rem; font-size: 0.82rem; }
+        .lang-switch a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .lang-switch a:focus-visible, a:focus-visible, button:focus-visible {
+          outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px;
+        }
+        hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+        .en-section { direction: ltr; text-align: left; }
+    </style>
+</head>
+<body>
+    <nav class="lang-switch" aria-label="Language">
+        <a href="#ar">العربية</a>
+        <a href="#en">English</a>
+    </nav>
+
+    <article id="ar" lang="ar" dir="rtl">
+        <h1>الشروط والأحكام — بنيان (Bunyan)</h1>
+        <p class="lede">آخر تحديث: 15 أغسطس 2026</p>
+
+        <p class="beta-note">
+            بنيان حاليًا في مرحلة تجريبية (Beta) — الاستخدام مجاني بالكامل خلال هذه المرحلة. لن
+            يُطلب أي اشتراك مدفوع قبل انتهاء الـ Beta، وسنُعلمك داخل التطبيق قبل تفعيل أي اشتراك،
+            ولن يُخصم أي مبلغ لمجرد انتهاء الـ Beta.
+        </p>
+
+        <div class="card">
+            <p>
+                باستخدامك تطبيق بنيان فإنك توافق على هذه الشروط. إذا كنت لا توافق عليها، يُرجى
+                عدم استخدام التطبيق.
+            </p>
+        </div>
+
+        <h2><span class="num">1.</span>ما هو بنيان</h2>
+        <p>
+            بنيان منصة برمجية لإدارة المباني ومحاسبة المصروفات والمستحقات بين المقيمين ومسؤولي
+            المبنى — تشمل تتبّع المصروفات المشتركة، مستحقات المقيمين، الدفعات، التسويات، والمبالغ
+            المستردة بين المقيمين.
+        </p>
+        <p>
+            <strong>بنيان أداة تسجيل وتنظيم فقط، وليست طرفًا في أي معاملة مالية تتم بين
+            المستخدمين.</strong> بنيان يسجّل وينظّم المعلومات التي يُدخلها المستخدمون؛ ولا يقوم
+            بإنشاء أو تحويل أو حيازة أو تسوية أي أموال بنفسه. أي تبادل فعلي للأموال (نقدًا، تحويل
+            بنكي، InstaPay، أو أي وسيلة أخرى يختارها المقيمون) يتم بالكامل خارج التطبيق، وبين
+            الأطراف أنفسهم.
+        </p>
+
+        <h2><span class="num">2.</span>مسؤولو المبنى والمقيمون</h2>
+        <p>هناك ثلاثة أطراف في استخدام بنيان:</p>
+        <ul>
+            <li><strong>مسؤول المبنى / المستخدم المخوَّل بالإدارة:</strong> مسؤول عن إعداد بيانات المبنى، إدارة عضوية المقيمين، وتسجيل أو اعتماد السجلات المالية للمبنى ضمن الصلاحيات التي يوفّرها التطبيق. قد تتغيّر الأدوار الدقيقة (مثل من يقوم بتحصيل أو تسجيل الدفعات) بحسب إعدادات كل مبنى، دون أن يغيّر ذلك من طبيعة بنيان كأداة تسجيل.</li>
+            <li><strong>المقيم:</strong> مسؤول عن مراجعة سجلاته الخاصة (المستحقات، الدفعات المسجَّلة باسمه)، وإبلاغ مسؤول المبنى بأي خطأ أو خلاف يتعلق بها.</li>
+            <li><strong>بنيان:</strong> يوفّر المنصة نفسها، ولا يقرر أو يتحقق مما إذا كانت دفعة معينة قد تمت فعليًا في الواقع بين طرفين.</li>
+        </ul>
+
+        <h2><span class="num">3.</span>السجلات المالية والخلافات</h2>
+        <p>هذا القسم مهم بشكل خاص لفهم طبيعة الخدمة:</p>
+        <ul>
+            <li>القيود المحاسبية والأرصدة المعروضة في التطبيق تُنشأ بناءً على المعلومات التي يُدخلها مستخدمو المبنى.</li>
+            <li>بنيان لا يتحقق بشكل مستقل من صحة أي دفعة نقدية، تحويل بنكي، معاملة InstaPay، فاتورة، أو أي واقعة مالية أخرى خارج التطبيق.</li>
+            <li>أي رصيد معروض هو سجل محاسبي مبني على البيانات المُدخلة في المنصة، وليس إثباتًا قانونيًا بحد ذاته لحدوث أو عدم حدوث دفعة.</li>
+            <li>على المقيمين حل أي خلاف يتعلق بدفعة فعلية، مصروف، مبلغ مسترد، أو التزام مالي مع مسؤول المبنى أو المقيمين المعنيين مباشرة.</li>
+            <li><strong>بنيان ليس وسيطًا، محكّمًا، جهة تحصيل ديون، بنكًا، أو مزوّد خدمات دفع.</strong></li>
+        </ul>
+
+        <h2><span class="num">4.</span>الحساب والوصول</h2>
+        <ul>
+            <li>يجب تقديم بيانات صحيحة عند إنشاء الحساب أو تسجيل مبنى جديد.</li>
+            <li>أنت مسؤول عن الحفاظ على سرية كلمة المرور الخاصة بك، وعدم مشاركتها مع أي شخص.</li>
+            <li>أنت مسؤول عن أي نشاط يتم من خلال حسابك، بما في ذلك حالات الوصول غير المُصرَّح به الناتجة عن تقصيرك في حماية بياناتك.</li>
+            <li>يمكن لمسؤول المبنى إضافة مقيمين، أو إلغاء تفعيل/إزالة عضوية مقيم من مبناه في أي وقت ضمن الصلاحيات المتاحة له.</li>
+            <li>عضويتك في مبنى واحد لا تمنحك أي وصول إلى بيانات مبنى آخر لست عضوًا فيه.</li>
+        </ul>
+
+        <h2><span class="num">5.</span>منصة متعددة المباني</h2>
+        <p>
+            قد يقدّم بنيان الخدمة لعدد من المباني المستقلة عن بعضها في نفس الوقت. لكل مبنى
+            مستخدموه وسجلاته وبياناته الخاصة، ولا يُمنح أي مستخدم الوصول إلا للمباني التي حصل على
+            صلاحية الانضمام إليها صراحةً. لا يعني استخدامك لبنيان أن فريق بنيان أو مستخدمي مبانٍ
+            أخرى لديهم وصول تلقائي إلى بيانات مبناك.
+        </p>
+
+        <h2><span class="num">6.</span>مرحلة الـ Beta</h2>
+        <p>التطبيق حاليًا في مرحلة تجريبية (Beta) قبل إطلاقه رسميًا. خلال هذه المرحلة:</p>
+        <ul>
+            <li>قد تتغيّر الميزات أو تختفي دون إشعار مسبق طويل.</li>
+            <li>قد تحدث أعطال أو أخطاء برمجية.</li>
+            <li>قد تتغيّر بنية البيانات أو الميزات مع تطوير المنتج.</li>
+            <li>قد تحدث انقطاعات مؤقتة في الخدمة.</li>
+            <li>بعض الميزات قد تكون تجريبية بطبيعتها.</li>
+        </ul>
+        <p>لا يُطلب أي رسوم اشتراك خلال الـ Beta. يُنصح بعدم الاعتماد على بنيان وحده كسجل مالي حصري وحرج دون الاحتفاظ بسجلات احتياطية خاصة بك خلال هذه المرحلة.</p>
+
+        <h2><span class="num">7.</span>الاشتراك والإطلاق التجاري</h2>
+        <ul>
+            <li>الاستخدام مجاني بالكامل حاليًا خلال مرحلة الـ Beta.</li>
+            <li>قد تُطرح خطط اشتراك مدفوعة بعد انتهاء الـ Beta.</li>
+            <li>سيتم عرض تفاصيل التسعير، حدود كل خطة، دورية الفوترة، والميزات المشمولة بوضوح قبل تفعيل أي خطة مدفوعة.</li>
+            <li>لن يتم خصم أي مبلغ لمجرد انتهاء الـ Beta — الانتقال لخطة مدفوعة يتطلب موافقتك.</li>
+            <li>عدم تجديد اشتراك مدفوع (بعد طرحه) قد يؤدي لتعليق الوصول للخدمة، مع الاحتفاظ بالبيانات وفق سياسة الاحتفاظ بالبيانات.</li>
+        </ul>
+
+        <h2><span class="num">8.</span>توافر الخدمة</h2>
+        <p>
+            نعمل على إتاحة الخدمة بشكل مستمر، لكننا لا نضمن عملها دون انقطاع بنسبة 100%. قد تحدث
+            انقطاعات بسبب الصيانة، التحديثات، أعطال في البنية التحتية لدى مزوّدين خارجيين، أو مشاكل
+            في الإنترنت لديك. قد نُعدّل أو نوقف بعض الميزات مع تطوّر المنتج.
+        </p>
+
+        <h2><span class="num">9.</span>البيانات التي يُدخلها المستخدمون</h2>
+        <p>
+            يبقى المستخدمون/المباني مسؤولين عن صحة المعلومات التي يُدخلونها في بنيان. يقوم بنيان
+            بمعالجة هذه المعلومات فقط لتقديم الخدمة. لا يتحمّل بنيان مسؤولية الأضرار الناتجة عن:
+        </p>
+        <ul>
+            <li>إدخال بيانات خاطئة.</li>
+            <li>إدخال بيانات احتيالية عمدًا.</li>
+            <li>تحريف الوقائع من قِبل أحد المستخدمين.</li>
+            <li>أفعال غير مصرَّح بها من قِبل مستخدمي مبنى معيّن.</li>
+            <li>خلافات بين المقيمين حول دفعات أو مستحقات فعلية.</li>
+        </ul>
+
+        <h2><span class="num">10.</span>الاستخدام غير المسموح به</h2>
+        <ul>
+            <li>محاولة الوصول غير المصرَّح به لأي حساب أو مبنى لا تنتمي إليه.</li>
+            <li>محاولة تجاوز إجراءات الأمان في التطبيق.</li>
+            <li>التلاعب بالسجلات أو الأرصدة دون صلاحية لذلك.</li>
+            <li>إنشاء حسابات أو مبانٍ وهمية أو احتيالية، أو إساءة استخدام آلية التسجيل الذاتي.</li>
+            <li>محاولة الهندسة العكسية للتطبيق أو إساءة استخدام الخدمة بأي شكل آخر.</li>
+            <li>استخدام التطبيق لأي غرض غير مشروع.</li>
+            <li>التدخل في عمل الخدمة أو محاولة تعطيلها.</li>
+        </ul>
+
+        <h2><span class="num">11.</span>إخلاء المسؤولية وحدود الالتزام</h2>
+        <p>بنيان لا يضمن:</p>
+        <ul>
+            <li>دقة السجلات المالية عندما يُدخل المستخدمون بيانات خاطئة.</li>
+            <li>إتمام أي دفعة فعلية في الواقع بين المستخدمين.</li>
+            <li>توافر الخدمة بشكل مستمر دون انقطاع.</li>
+            <li>خلو التطبيق التام من الأخطاء البرمجية، خصوصًا خلال مرحلة الـ Beta.</li>
+            <li>صلاحية المنصة كسجل محاسبي قانوني وحيد وملزم دون أي وسيلة توثيق أخرى.</li>
+        </ul>
+        <p>
+            نبذل جهدًا معقولًا لتقديم خدمة موثوقة، لكن هذا الإخلاء لا يُقصد به التنصّل من التزاماتنا
+            الأساسية تجاهك كمزوّد للخدمة نفسها — بل يوضّح أن بنيان لا يتحمّل مسؤولية الوقائع
+            المالية الحقيقية التي تحدث خارج التطبيق.
+        </p>
+
+        <h2><span class="num">12.</span>التعليق والإنهاء</h2>
+        <ul>
+            <li>يمكنك طلب إغلاق حسابك في أي وقت.</li>
+            <li>يمكن لمسؤول المبنى إلغاء تفعيل أو إزالة عضوية مقيم من مبناه.</li>
+            <li>يحق لبنيان تعليق أو إنهاء أي حساب يخالف هذه الشروط أو يشكّل خطرًا أمنيًا.</li>
+            <li>بعد طرح خطط مدفوعة، قد يؤدي عدم السداد إلى تعليق الوصول للخدمة.</li>
+            <li>إنهاء حسابك يوقف وصولك للتطبيق، لكنه لا يعني بالضرورة حذف السجلات المالية التاريخية للمبنى التي تتضمن بيانات تخصك — إذ تُعد هذه السجلات جزءًا من السجل المحاسبي الجماعي للمبنى (راجع سياسة الخصوصية).</li>
+        </ul>
+
+        <h2><span class="num">13.</span>القانون الحاكم</h2>
+        <p>تخضع هذه الشروط لقوانين جمهورية مصر العربية.</p>
+
+        <h2><span class="num">14.</span>الجهة المشغّلة لبنيان</h2>
+        <p>يتم تشغيل بنيان بواسطة بنيان (Bunyan).</p>
+
+        <h2><span class="num">15.</span>تعديلات على هذه الشروط</h2>
+        <p>قد نحدّث هذه الشروط من وقت لآخر، خصوصًا خلال مرحلة الـ Beta وعند الإطلاق الرسمي؛ سيظهر تاريخ آخر تحديث أعلى الصفحة.</p>
+
+        <h2><span class="num">16.</span>التواصل</h2>
+        <p>لأي استفسار حول هذه الشروط، تواصل معنا عبر واتساب من داخل التطبيق.</p>
+    </article>
+
+    <hr/>
+
+    <article id="en" lang="en" dir="ltr" class="en-section">
+        <h1>Terms of Service — Bunyan</h1>
+        <p class="lede">Last updated: August 15, 2026</p>
+
+        <p class="beta-note">
+            Bunyan is currently in beta — the app is entirely free to use during this period. No
+            paid subscription will be charged before beta ends, we'll notify you in-app before
+            any subscription is ever activated, and nothing is charged simply because beta ends.
+        </p>
+
+        <div class="card">
+            <p>
+                By using the Bunyan app you agree to these terms. If you do not agree, please do
+                not use the app.
+            </p>
+        </div>
+
+        <h2><span class="num">1.</span>What Bunyan is</h2>
+        <p>
+            Bunyan is a software platform for building management and bookkeeping — tracking
+            shared building expenses, resident dues, payments, settlements, and reimbursements
+            between residents.
+        </p>
+        <p>
+            <strong>Bunyan is a records and organization tool only, and is not a party to any
+            financial transaction between users.</strong> Bunyan records and organizes
+            information supplied by users; it does not itself create, transfer, hold, or settle
+            money. Any actual exchange of money (cash, bank transfer, InstaPay, or any other
+            method residents choose) happens entirely outside the app, directly between the
+            parties involved.
+        </p>
+
+        <h2><span class="num">2.</span>Building administrators and residents</h2>
+        <p>There are three parties involved in using Bunyan:</p>
+        <ul>
+            <li><strong>Building administrator / authorized user:</strong> responsible for configuring the building, managing resident membership, and entering or approving the building's records within the permissions the app provides. The exact responsibilities (e.g. who records or collects payments) may vary by building's own setup, without changing Bunyan's own nature as a records tool.</li>
+            <li><strong>Resident:</strong> responsible for reviewing their own records (dues, payments recorded under their name) and reporting any error or dispute to the building administrator.</li>
+            <li><strong>Bunyan:</strong> provides the platform itself, and does not decide or verify whether a given payment actually happened in the real world between two parties.</li>
+        </ul>
+
+        <h2><span class="num">3.</span>Financial records and disputes</h2>
+        <p>This section is particularly important to understanding the nature of the service:</p>
+        <ul>
+            <li>Ledger entries and balances shown in the app are generated from information entered by the building's own users.</li>
+            <li>Bunyan does not independently verify cash payments, bank transfers, InstaPay transactions, invoices, or any other real-world event outside the app.</li>
+            <li>A displayed balance is an accounting record based on information entered into the platform — it is not, by itself, legal proof that a payment did or did not occur.</li>
+            <li>Residents should resolve any dispute regarding an actual payment, expense, reimbursement, or obligation directly with the building administrator or the residents concerned.</li>
+            <li><strong>Bunyan is not a mediator, arbitrator, debt collector, bank, or payment processor.</strong></li>
+        </ul>
+
+        <h2><span class="num">4.</span>Account and access</h2>
+        <ul>
+            <li>Accurate information must be provided when creating an account or registering a new building.</li>
+            <li>You are responsible for keeping your password confidential and not sharing it with anyone.</li>
+            <li>You are responsible for activity performed through your account, including unauthorized access resulting from a failure to keep your credentials secure.</li>
+            <li>A building administrator may add residents, or deactivate/remove a resident's membership from their building at any time, within the permissions available to them.</li>
+            <li>Your membership in one building never grants you access to a different building's data that you're not a member of.</li>
+        </ul>
+
+        <h2><span class="num">5.</span>A multi-building platform</h2>
+        <p>
+            Bunyan may provide service to a number of independent buildings at the same time.
+            Each building has its own users, records, and data, and no user is granted access
+            except to buildings they've been explicitly authorized to join. Using Bunyan does not
+            mean the Bunyan team or other buildings' users have automatic access to your
+            building's data.
+        </p>
+
+        <h2><span class="num">6.</span>Beta status</h2>
+        <p>The app is currently in beta, ahead of an official launch. During this period:</p>
+        <ul>
+            <li>Features may change or disappear without extensive prior notice.</li>
+            <li>Bugs may exist.</li>
+            <li>Data structures or features may change as the product develops.</li>
+            <li>Temporary service interruptions may occur.</li>
+            <li>Some functionality may be experimental by nature.</li>
+        </ul>
+        <p>No subscription fee is charged during beta. You should not rely on Bunyan alone as your sole critical financial record without keeping your own backup records during this period.</p>
+
+        <h2><span class="num">7.</span>Subscription and commercial launch</h2>
+        <ul>
+            <li>Use is entirely free right now, during beta.</li>
+            <li>Paid plans may be introduced after beta ends.</li>
+            <li>Pricing, plan limits, billing frequency, and included features will be clearly presented before any paid plan is activated.</li>
+            <li>Nothing will be charged simply because beta ends — moving to a paid plan requires your consent.</li>
+            <li>Failure to renew a paid subscription (once introduced) may result in suspension of access to the service, while data is retained per the data-retention terms.</li>
+        </ul>
+
+        <h2><span class="num">8.</span>Service availability</h2>
+        <p>
+            We work to keep the service available, but we do not guarantee 100% uninterrupted
+            operation. Outages may occur due to maintenance, updates, failures in third-party
+            infrastructure, or your own internet connectivity. We may modify or discontinue
+            features as the product evolves.
+        </p>
+
+        <h2><span class="num">9.</span>User-generated data</h2>
+        <p>
+            Users/buildings remain responsible for the accuracy of the information they enter
+            into Bunyan. Bunyan processes that information only to provide the service. Bunyan is
+            not liable for harm arising from:
+        </p>
+        <ul>
+            <li>Incorrect data entry.</li>
+            <li>Deliberately fraudulent entries.</li>
+            <li>Misrepresentation by a user.</li>
+            <li>Unauthorized actions by a building's own users.</li>
+            <li>Disputes between residents over actual payments or dues.</li>
+        </ul>
+
+        <h2><span class="num">10.</span>Prohibited use</h2>
+        <ul>
+            <li>Attempting unauthorized access to any account or building you don't belong to.</li>
+            <li>Attempting to circumvent the app's security measures.</li>
+            <li>Manipulating records or balances without authorization.</li>
+            <li>Creating fraudulent accounts or buildings, or abusing self-signup.</li>
+            <li>Reverse engineering the app or otherwise abusing the service.</li>
+            <li>Using the app for any unlawful purpose.</li>
+            <li>Interfering with, or attempting to disrupt, the service.</li>
+        </ul>
+
+        <h2><span class="num">11.</span>Disclaimer and limitation of liability</h2>
+        <p>Bunyan does not guarantee:</p>
+        <ul>
+            <li>Financial accuracy when users enter incorrect data.</li>
+            <li>That any actual real-world payment between users was completed.</li>
+            <li>Continuous, uninterrupted availability.</li>
+            <li>Error-free operation, particularly during the beta period.</li>
+            <li>That the platform is suitable as a sole, legally binding accounting record without any other form of documentation.</li>
+        </ul>
+        <p>
+            We make reasonable efforts to provide a reliable service; this disclaimer is not
+            meant to disclaim our basic obligations as the provider of the service itself — it
+            clarifies that Bunyan is not responsible for the underlying real-world financial
+            events that happen outside the app.
+        </p>
+
+        <h2><span class="num">12.</span>Suspension and termination</h2>
+        <ul>
+            <li>You may request to close your account at any time.</li>
+            <li>A building administrator may deactivate or remove a resident's membership from their building.</li>
+            <li>Bunyan may suspend or terminate any account that violates these terms or poses a security risk.</li>
+            <li>Once paid plans exist, non-payment may result in suspension of access to the service.</li>
+            <li>Terminating your account stops your access to the app, but does not necessarily mean deletion of a building's historical financial records that reference you — those records remain part of the building's collective accounting history (see the Privacy Policy).</li>
+        </ul>
+
+        <h2><span class="num">13.</span>Governing law</h2>
+        <p>These terms are governed by the laws of Egypt.</p>
+
+        <h2><span class="num">14.</span>Operator of Bunyan</h2>
+        <p>Bunyan is operated by Bunyan.</p>
+
+        <h2><span class="num">15.</span>Changes to these terms</h2>
+        <p>We may update these terms from time to time, especially during beta and at official launch; the "last updated" date above will reflect that.</p>
+
+        <h2><span class="num">16.</span>Contact</h2>
+        <p>For any question about these terms, contact us via WhatsApp from inside the app.</p>
+    </article>
+</body>
+</html>

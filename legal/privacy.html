@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8"/>
+    <title>Bunyan — سياسة الخصوصية</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        :root {
+          color-scheme: light dark;
+          --ink: light-dark(#1c1b16, #edeae2);
+          --muted: light-dark(#6e6b60, #a5a296);
+          --line: light-dark(#e6e1d6, #302e25);
+          --surface: light-dark(#ffffff, #201f19);
+          --surface-sunken: light-dark(#faf8f4, #17160f);
+          --accent: light-dark(#106b58, #3fae8f);
+          --beta-bg: light-dark(#eaf3ef, #16241f);
+          --beta-ink: light-dark(#106b58, #6fd4b7);
+          --radius: 8px;
+          font-size: 15px;
+        }
+        * { box-sizing: border-box; }
+        body {
+          font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+          color: var(--ink);
+          background: var(--surface-sunken);
+          max-width: 760px;
+          margin: 0 auto;
+          padding: clamp(1rem, 3vw, 2.5rem);
+          line-height: 1.7;
+        }
+        h1 { font-size: 1.3rem; font-weight: 700; margin: 0 0 0.25rem; }
+        h2 { font-size: 1.02rem; font-weight: 650; margin: 1.75rem 0 0.6rem; }
+        h2 .num { color: var(--muted); font-weight: 550; margin-inline-end: 0.35rem; }
+        h3 { font-size: 0.88rem; font-weight: 650; margin: 1rem 0 0.4rem; }
+        p, li { font-size: 0.92rem; color: var(--ink); }
+        ul { padding-inline-start: 1.3rem; margin: 0.4rem 0; }
+        li + li { margin-top: 0.25rem; }
+        .lede { color: var(--muted); font-size: 0.85rem; margin: 0 0 1.5rem; }
+        .card {
+          background: var(--surface);
+          border: 1px solid var(--line);
+          border-radius: var(--radius);
+          padding: 1.1rem 1.3rem;
+          margin-bottom: 1rem;
+        }
+        .beta-note {
+          background: var(--beta-bg); color: var(--beta-ink);
+          border-radius: var(--radius);
+          padding: 0.7rem 1rem;
+          font-size: 0.85rem; font-weight: 550;
+          margin-bottom: 1.5rem;
+        }
+        .lang-switch { display: flex; gap: 0.6rem; margin-bottom: 1.5rem; font-size: 0.82rem; }
+        .lang-switch a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .lang-switch a:focus-visible, a:focus-visible, button:focus-visible {
+          outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px;
+        }
+        hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+        .en-section { direction: ltr; text-align: left; }
+    </style>
+</head>
+<body>
+    <nav class="lang-switch" aria-label="Language">
+        <a href="#ar">العربية</a>
+        <a href="#en">English</a>
+    </nav>
+
+    <article id="ar" lang="ar" dir="rtl">
+        <h1>سياسة الخصوصية — بنيان (Bunyan)</h1>
+        <p class="lede">آخر تحديث: 15 أغسطس 2026</p>
+
+        <p class="beta-note">
+            بنيان حاليًا في مرحلة تجريبية (Beta). قد تتغيّر تفاصيل جمع البيانات مع إضافة ميزات
+            جديدة خلال هذه المرحلة، وسنحدّث هذه الصفحة عند حدوث ذلك.
+        </p>
+
+        <div class="card">
+            <p>
+                توضّح هذه الصفحة البيانات التي يجمعها تطبيق بنيان، منصة إدارة مباني ومحاسبة
+                متعددة المباني (SaaS)، وكيفية استخدامها. باستخدامك للتطبيق فإنك توافق على ما ورد
+                هنا.
+            </p>
+        </div>
+
+        <h2><span class="num">1.</span>الجهة المشغّلة</h2>
+        <p>يتم تشغيل بنيان، وهو الجهة المسؤولة عن معالجة بياناتك ("نحن")، بواسطة بنيان (Bunyan).</p>
+
+        <h2><span class="num">2.</span>البيانات التي نجمعها</h2>
+
+        <h3>أ. بيانات الحساب</h3>
+        <ul>
+            <li>الاسم ورقم الهاتف المستخدَمين لتسجيل الدخول.</li>
+        </ul>
+
+        <h3>ب. بيانات المبنى والعضوية</h3>
+        <ul>
+            <li>اسم المبنى، الوحدة/الطابق، وصلاحية الحساب (مقيم أو مسؤول مبنى).</li>
+            <li>موقع المبنى (خط العرض/الطول) — انظر قسم الموقع أدناه.</li>
+        </ul>
+
+        <h3>ج. البيانات المالية والمحاسبية</h3>
+        <ul>
+            <li>سجلات المصروفات، المستحقات، الدفعات، المبالغ المستردة بين المقيمين، والتسويات، كما يُدخلها مسؤول المبنى أو المستخدمون المخوَّلون.</li>
+        </ul>
+
+        <h3>د. بيانات الجهاز والبيانات الفنية</h3>
+        <ul>
+            <li>رمز إشعارات الجهاز (Push Token)، لإرسال تذكيرات السداد.</li>
+            <li>بيانات فنية عند حدوث عطل في التطبيق (تقارير أعطال تلقائية) وإصدار التطبيق المُستخدم.</li>
+        </ul>
+
+        <h3>هـ. بيانات الموقع</h3>
+        <ul>
+            <li>موقع المبنى (خط العرض/الطول) فقط، عند تسجيل مبنى جديد.</li>
+        </ul>
+
+        <h3>و. بيانات التواصل والدعم</h3>
+        <ul>
+            <li>محتوى أي رسالة تُرسلها لنا عبر واتساب من داخل التطبيق طلبًا للدعم.</li>
+        </ul>
+
+        <p>نجمع فقط ما هو مذكور أعلاه؛ لا نجمع بيانات تحليلات استخدام تسويقية، أو إعلانات، أو بيانات بيومترية، أو صورًا، أو جهات اتصال هاتفك.</p>
+
+        <h2><span class="num">3.</span>كيف نستخدم هذه البيانات</h2>
+        <ul>
+            <li>لتشغيل حساب المبنى: عرض المستحقات، تسجيل الدفعات، وإدارة المقيمين.</li>
+            <li>لإرسال تذكيرات بالمستحقات المتأخرة (تلقائيًا أو بطلب من مسؤول المبنى).</li>
+            <li>لتشخيص وإصلاح أعطال التطبيق وتحسين أداءه.</li>
+            <li>للرد على طلبات الدعم التي ترسلها لنا.</li>
+        </ul>
+        <p>لا نبيع بياناتك، ولا نستخدمها في الإعلانات.</p>
+
+        <h2><span class="num">4.</span>السجلات المالية للمبنى</h2>
+        <p>
+            قد يحتفظ بنيان بسجلات المصروفات، المستحقات، الدفعات، المبالغ المستردة، التسويات،
+            وقيود دفتر الأستاذ الخاصة بكل مبنى. غالبًا ما تتعلق هذه السجلات بأكثر من مقيم واحد
+            (مثلًا: دفعة مسجَّلة من مقيم لصالح المبنى، أو تسوية بين مقيمَين) — لذلك، لا يمكن
+            بالضرورة حذف سجل مالي معيّن بشكل كامل لمجرد أن أحد الأطراف المرتبطين به طلب حذف
+            حسابه. راجع قسم "حذف البيانات" أدناه لمزيد من التفاصيل.
+        </p>
+
+        <h2><span class="num">5.</span>العزل بين المباني (Multi-tenant)</h2>
+        <p>
+            بيانات كل مبنى (المقيمون، المستحقات، الدفعات) معزولة منطقيًا عن بيانات أي مبنى آخر.
+            لا يحصل أي مستخدم على وصول إلا للمباني التي صُرِّح له بالانضمام إليها صراحةً. تُفرض
+            ضوابط الوصول هذه على مستوى الخادم/قاعدة البيانات نفسها — وليست مجرد إخفاء في واجهة
+            التطبيق — بحيث لا يمكن لمقيم في مبنى آخر الاطلاع على بيانات مبناك.
+        </p>
+
+        <h2><span class="num">6.</span>مزوّدو الخدمة الخارجيون</h2>
+        <p>
+            نستخدم مزوّدي بنية تحتية وخدمات خارجيين لتشغيل بنيان، مثل: استضافة/قاعدة بيانات
+            سحابية، خدمة توثيق الحسابات، إرسال إشعارات الدفع، وتقارير أعطال التطبيق. يعالج هؤلاء
+            المزوّدون بياناتك فقط بالقدر اللازم لتقديم خدماتهم، ووفق شروطهم ومتطلبات الخصوصية
+            الخاصة بهم. لا نشارك بياناتك مع أي طرف آخر لأغراض غير متعلقة بتشغيل الخدمة (كالإعلانات
+            مثلًا).
+        </p>
+
+        <h2><span class="num">7.</span>إشعارات الدفع وبيانات الجهاز</h2>
+        <p>
+            نجمع رمز إشعار خاص بجهازك (Push Token) فقط لإرسال تذكيرات السداد لك. لا يتيح هذا
+            الرمز لنا تتبّع موقعك الجغرافي الفعلي — تخزين رمز الجهاز لا يعني تتبّع موقعك.
+        </p>
+
+        <h2><span class="num">8.</span>الموقع الجغرافي</h2>
+        <p>
+            نجمع موقع المبنى (خط العرض/الطول) فقط عند تسجيل مبنى جديد، وهذا اختياري بالكامل —
+            يمكن إتمام التسجيل دون تحديد موقع. هذا الموقع مرتبط بالمبنى نفسه (لعرضه على الخريطة)،
+            وليس تتبّعًا مستمرًا لموقعك الشخصي كمستخدم.
+        </p>
+
+        <h2><span class="num">9.</span>الاحتفاظ بالبيانات</h2>
+        <ul>
+            <li>بيانات الحساب/الملف الشخصي: تُحفظ طالما حسابك نشط، ويمكن حذفها أو إلغاء تفعيلها حسب طلبك.</li>
+            <li>السجلات المالية لدفتر أستاذ المبنى: قد يلزم بقاؤها متاحة كجزء من السجل التاريخي المحاسبي للمبنى، حتى بعد حذف حساب أحد الأطراف المرتبطين بها.</li>
+            <li>قد نحتفظ ببعض المعلومات للمدة اللازمة فقط لأغراض الأمان، الالتزامات القانونية، حل الخلافات، منع الاحتيال، أو أغراض تشغيلية مشروعة أخرى.</li>
+        </ul>
+
+        <h2><span class="num">10.</span>حذف البيانات</h2>
+        <p>
+            هناك فرق بين <strong>حذف/إلغاء تفعيل حساب مستخدم</strong> و<strong>حذف سجلات المبنى
+            التي تشير إلى هذا المستخدم</strong>. عند حذف حسابك، يُلغى وصولك للتطبيق وتُحذف بيانات
+            ملفك الشخصي القابلة للحذف؛ أما القيود المحاسبية التاريخية التي تخص المبنى وتتضمن
+            بياناتك (مثل دفعة سجّلها مسؤول المبنى باسمك) فقد تبقى ضمن السجل المحاسبي للمبنى، لأنها
+            جزء من تاريخ مالي يخص أطرافًا أخرى أيضًا، وليست بيانات شخصية بحتة يمكن عزلها وحذفها
+            دون التأثير على دقة سجلات المبنى.
+        </p>
+
+        <h2><span class="num">11.</span>حقوقك</h2>
+        <p>
+            يحق لك طلب الاطلاع على بياناتك، أو تصحيحها، أو طلب حذفها، بالتواصل معنا عبر واتساب من
+            داخل التطبيق. سنستجيب لطلبك ضمن حدود ما هو ممكن تقنيًا وقانونيًا — قد لا يؤدي طلب
+            الحذف بالضرورة لحذف كل سجل تاريخي، إذا كان هناك سبب مشروع للاحتفاظ به (انظر الأقسام
+            أعلاه).
+        </p>
+
+        <h2><span class="num">12.</span>الأمان</h2>
+        <p>
+            كلمة مرورك لا تُعتبر بيانات نجمعها أو نخزّنها أو نستخدمها بأي شكل من جانبنا — عند
+            تسجيل الدخول، تُرسَل كلمة المرور مباشرةً إلى خدمة التوثيق المتخصصة التي نعتمد عليها،
+            والتي تتحقق منها عبر دالة تجزئة أحادية الاتجاه (hashing) دون أن تُحفظ كنص واضح في أي
+            مكان، ودون أن يكون لبنيان أو فريقه أي وصول إليها بصيغتها الأصلية في أي وقت. الاتصال
+            بين التطبيق وخوادمنا مشفّر بالكامل عبر HTTPS. نطبّق إجراءات حماية تقنية وتنظيمية
+            معقولة، لكن لا يمكن لأي خدمة عبر الإنترنت أن تضمن أمانًا مطلقًا بنسبة 100%. أنت مسؤول
+            أيضًا عن الحفاظ على سرية بيانات دخولك.
+        </p>
+
+        <h2><span class="num">13.</span>الأطفال</h2>
+        <p>هذا التطبيق غير موجّه للأطفال، ولا نجمع بيانات عن مستخدمين نعلم أنهم دون السن القانونية.</p>
+
+        <h2><span class="num">14.</span>المعالجة الدولية/السحابية</h2>
+        <p>
+            قد تتم معالجة أو تخزين بياناتك من قِبل مزوّدي الخدمة الذين نستخدمهم في الدول التي
+            يعملون بها، وهو ما قد يشمل مواقع خارج مصر بحسب البنية التحتية السحابية المستخدمة.
+        </p>
+
+        <h2><span class="num">15.</span>تعديلات على هذه السياسة</h2>
+        <p>
+            قد نحدّث هذه السياسة من وقت لآخر، خصوصًا خلال مرحلة الـ Beta؛ سيظهر تاريخ آخر تحديث
+            أعلى الصفحة. عند إجراء تغيير جوهري، قد نُعلمك عبر التطبيق أو أي وسيلة مناسبة أخرى.
+        </p>
+    </article>
+
+    <hr/>
+
+    <article id="en" lang="en" dir="ltr" class="en-section">
+        <h1>Privacy Policy — Bunyan</h1>
+        <p class="lede">Last updated: August 15, 2026</p>
+
+        <p class="beta-note">
+            Bunyan is currently in beta. Data-collection details may change as we add features
+            during this period, and we'll update this page whenever that happens.
+        </p>
+
+        <div class="card">
+            <p>
+                This page explains what data the Bunyan app — a multi-building management and
+                bookkeeping SaaS platform — collects, and how it's used. By using the app, you
+                agree to what's described here.
+            </p>
+        </div>
+
+        <h2><span class="num">1.</span>Operator</h2>
+        <p>Bunyan, the party responsible for processing your data ("we", "us"), is operated by Bunyan.</p>
+
+        <h2><span class="num">2.</span>Data we collect</h2>
+
+        <h3>A. Account information</h3>
+        <ul>
+            <li>Name and phone number, used to sign in.</li>
+        </ul>
+
+        <h3>B. Building and membership information</h3>
+        <ul>
+            <li>Building name, unit/floor, and account role (resident or building administrator).</li>
+            <li>Building location (latitude/longitude) — see the Location section below.</li>
+        </ul>
+
+        <h3>C. Financial and ledger information</h3>
+        <ul>
+            <li>Expense, dues, payment, reimbursement, and settlement records, as entered by a building's administrator or authorized users.</li>
+        </ul>
+
+        <h3>D. Device and technical information</h3>
+        <ul>
+            <li>A device push notification token, to deliver payment reminders.</li>
+            <li>Technical crash data (automated crash reporting) and the app version in use, when the app fails.</li>
+        </ul>
+
+        <h3>E. Location information</h3>
+        <ul>
+            <li>Building location (latitude/longitude) only, collected when registering a new building.</li>
+        </ul>
+
+        <h3>F. Communications / support information</h3>
+        <ul>
+            <li>The content of any message you send us via WhatsApp from inside the app when requesting support.</li>
+        </ul>
+
+        <p>We only collect what's listed above; we do not collect marketing/usage analytics, advertising data, biometric data, photos, or your phone's contacts.</p>
+
+        <h2><span class="num">3.</span>How we use this data</h2>
+        <ul>
+            <li>To operate the building account: showing dues, recording payments, and managing residents.</li>
+            <li>To send reminders for overdue payments (automatically, or on a building admin's request).</li>
+            <li>To diagnose and fix app crashes, and improve performance.</li>
+            <li>To respond to support requests you send us.</li>
+        </ul>
+        <p>We do not sell your data, and do not use it for advertising.</p>
+
+        <h2><span class="num">4.</span>Building financial records</h2>
+        <p>
+            Bunyan may retain a building's expense, dues, payment, reimbursement, settlement, and
+            ledger records. These records often involve more than one resident (e.g. a payment
+            recorded from one resident toward the building, or a settlement between two
+            residents) — so a specific financial record cannot necessarily be fully deleted
+            simply because one of the people referenced in it requests account deletion. See
+            "Data deletion" below.
+        </p>
+
+        <h2><span class="num">5.</span>Multi-tenant isolation</h2>
+        <p>
+            Each building's data (residents, dues, payments) is logically isolated from every
+            other building's data. No user is granted access except to buildings they've been
+            explicitly authorized to join. These access controls are enforced at the
+            server/database level itself — not merely hidden in the app's interface — so a
+            resident of a different building cannot see your building's data.
+        </p>
+
+        <h2><span class="num">6.</span>Third-party service providers</h2>
+        <p>
+            We use third-party infrastructure and service providers to operate Bunyan, such as:
+            cloud database/hosting, account authentication, push notification delivery, and
+            crash reporting. These providers process your data only to the extent necessary to
+            provide their services, and under their own applicable terms and privacy
+            requirements. We do not share your data with any other party for purposes unrelated
+            to operating the service (such as advertising).
+        </p>
+
+        <h2><span class="num">7.</span>Push notifications and device data</h2>
+        <p>
+            We collect a device push token solely to deliver payment-reminder notifications to
+            you. This token does not let us track your physical location — storing a device
+            token does not mean location tracking.
+        </p>
+
+        <h2><span class="num">8.</span>Location</h2>
+        <p>
+            We collect a building's location (latitude/longitude) only when registering a new
+            building, and this is entirely optional — signup can be completed without setting a
+            location. This location is associated with the building itself (to display it on a
+            map), not continuous tracking of you personally as a user.
+        </p>
+
+        <h2><span class="num">9.</span>Data retention</h2>
+        <ul>
+            <li>Account/profile data: kept while your account is active, and can be deleted or deactivated on your request.</li>
+            <li>A building's ledger financial records: may need to remain available as part of the building's historical accounting record, even after a referenced user's account is deleted.</li>
+            <li>We may retain certain information only for as long as necessary for security, legal obligations, dispute resolution, fraud prevention, or other legitimate operational purposes.</li>
+        </ul>
+
+        <h2><span class="num">10.</span>Data deletion</h2>
+        <p>
+            There is a difference between <strong>deleting/deactivating a user's account</strong>
+            and <strong>deleting building records that reference that user</strong>. Deleting
+            your account revokes your access to the app and deletes your deletable profile data;
+            however, historical building ledger entries that involve you (e.g. a payment your
+            building's administrator recorded under your name) may remain part of the building's
+            accounting record, because they're part of a financial history that also concerns
+            other people — not purely personal data that can be isolated and deleted without
+            affecting the accuracy of the building's own records.
+        </p>
+
+        <h2><span class="num">11.</span>Your rights</h2>
+        <p>
+            You may request access to your data, ask us to correct it, or request its deletion,
+            by contacting us via WhatsApp from inside the app. We'll respond within what's
+            technically and legally possible — a deletion request may not necessarily result in
+            deleting every historical record, where there's a legitimate reason to retain it (see
+            the sections above).
+        </p>
+
+        <h2><span class="num">12.</span>Security</h2>
+        <p>
+            Your password is not data we collect, store, or use ourselves. At sign-in, it's sent
+            directly to the dedicated authentication service we rely on, which verifies it using
+            one-way password hashing without ever storing it as readable plaintext anywhere —
+            Bunyan and its team never have access to it in its original form, at any point.
+            Communication between the app and our servers is fully encrypted over HTTPS. We
+            implement reasonable technical and organizational safeguards, but no internet service
+            can guarantee absolute, 100% security. You're also responsible for keeping your own
+            login credentials secure.
+        </p>
+
+        <h2><span class="num">13.</span>Children</h2>
+        <p>This app is not directed at children, and we do not knowingly collect data from users below the legal age.</p>
+
+        <h2><span class="num">14.</span>International / cloud processing</h2>
+        <p>
+            Your data may be processed or stored by the service providers we use in the
+            countries where they operate, which may include locations outside Egypt depending on
+            the cloud infrastructure in use.
+        </p>
+
+        <h2><span class="num">15.</span>Changes to this policy</h2>
+        <p>
+            We may update this policy from time to time, especially during the beta period; the
+            "last updated" date above will reflect that. For a material change, we may notify you
+            through the app or another appropriate means.
+        </p>
+    </article>
+</body>
+</html>
